@@ -491,7 +491,8 @@ body {
 }
 
 .cover-character {
-    width: 400px;
+    width: 700px;
+    max-width: 90vw;
     display: flex;
     align-items: center;
     justify-content: center;
