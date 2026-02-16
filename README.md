@@ -1,0 +1,2 @@
+# careertype_instruction
+キャリアタイプ診断の説明書です
