@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャリアタイプ診断 | 16の冒険者タイプ</title>
+    <meta name="description" content="あなたのキャリアタイプは？16の冒険者タイプで、自分の得意な戦い方を知ろう。">
+    <link rel="stylesheet" href="src/slides.css">
+</head>
+
+<body>
+
+    <!-- Progress Bar -->
+    <div class="slide-progress">
+        <div class="slide-progress-bar" id="progress-bar" style="width:6.7%"></div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <nav class="slide-nav" aria-label="スライドナビゲーション">
+        <button class="slide-nav-dot active" data-label="表紙"></button>
+        <button class="slide-nav-dot" data-label="わかること"></button>
+        <button class="slide-nav-dot" data-label="4つの軸"></button>
+        <button class="slide-nav-dot" data-label="開拓の冒険者"></button>
+        <button class="slide-nav-dot" data-label="孤高の探求者"></button>
+        <button class="slide-nav-dot" data-label="守護の賢者"></button>
+        <button class="slide-nav-dot" data-label="静寂の職人"></button>
+        <button class="slide-nav-dot" data-label="冒険者 詳細1"></button>
+        <button class="slide-nav-dot" data-label="冒険者 詳細2"></button>
+        <button class="slide-nav-dot" data-label="探求者 詳細1"></button>
+        <button class="slide-nav-dot" data-label="探求者 詳細2"></button>
+        <button class="slide-nav-dot" data-label="賢者 詳細1"></button>
+        <button class="slide-nav-dot" data-label="賢者 詳細2"></button>
+        <button class="slide-nav-dot" data-label="職人 詳細1"></button>
+        <button class="slide-nav-dot" data-label="職人 詳細2"></button>
+    </nav>
+
+    <!-- Slides Container -->
+    <div class="slides-container">
+
+        <!-- ===== Slide 1: Cover ===== -->
+        <section class="slide slide--cover active" id="slide-1">
+            <span class="slide-number">01 / 15</span>
+            <div class="cover-content">
+                <div class="cover-badge anim-item">Career Type Diagnosis</div>
+                <div class="cover-character anim-item">
+                    <img src="images/cover-characters.png" alt="16の冒険者タイプ">
+                </div>
+                <h1 class="cover-title anim-item">
+                    あなたの<br><span class="highlight">キャリアタイプ</span>は？
+                </h1>
+                <p class="cover-sub anim-item">
+                    16の冒険者タイプで、自分の"得意な戦い方"を知ろう
+                </p>
+                <div class="ornament anim-item">✦ ✦ ✦</div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 2: What You'll Learn ===== -->
+        <section class="slide slide--intro" id="slide-2">
+            <span class="slide-number">02 / 15</span>
+            <div class="center-layout">
+                <span class="slide-label anim-item">Discovery</span>
+                <h2 class="section-heading anim-item">この診断でわかること</h2>
+                <p class="section-desc anim-item">性格ではなく「行動特性」を見る、新しいキャリア診断です</p>
+                <div class="point-cards anim-item">
+                    <div class="point-card">
+                        <div class="point-icon">🗺️</div>
+                        <div class="point-title">力を発揮しやすい<br>環境がわかる</div>
+                        <div class="point-desc">どんな場所・状況だと自分らしくいられるか。冒険のフィールドを見つけよう。</div>
+                    </div>
+                    <div class="point-card">
+                        <div class="point-icon">⚔️</div>
+                        <div class="point-title">向いている役割・<br>職種の傾向がわかる</div>
+                        <div class="point-desc">攻撃型？サポート型？あなたの得意な戦い方が見えてきます。</div>
+                    </div>
+                    <div class="point-card">
+                        <div class="point-icon">📖</div>
+                        <div class="point-title">行動特性を<br>冒険者タイプで理解</div>
+                        <div class="point-desc">16タイプの冒険者として、自分の特性を楽しく理解できます。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 3: 4 Axes & Difference ===== -->
+        <section class="slide slide--axes" id="slide-3">
+            <span class="slide-number">03 / 15</span>
+            <div class="axes-layout">
+                <div class="axes-left">
+                    <span class="slide-label anim-item">Why This Works</span>
+                    <h2 class="section-heading anim-item">なぜ、この診断なのか</h2>
+                    <p class="section-desc anim-item" style="margin-bottom:8px;">
+                        MBTIなどの性格診断とは違い、この診断は<strong>仕事における行動の傾向</strong>にフォーカスしています。</p>
+                    <div class="diff-card anim-item">
+                        <table class="diff-table">
+                            <tr>
+                                <th></th>
+                                <th>一般的な性格診断</th>
+                                <th>この診断</th>
+                            </tr>
+                            <tr>
+                                <td>焦点</td>
+                                <td>性格・内面</td>
+                                <td>仕事の行動特性</td>
+                            </tr>
+                            <tr>
+                                <td>結果</td>
+                                <td>あなたは〇〇タイプ</td>
+                                <td>こんな場面で力が出やすい</td>
+                            </tr>
+                            <tr>
+                                <td>活用</td>
+                                <td>自己理解</td>
+                                <td>キャリア選択に直結</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="axes-right anim-item">
+                    <div class="axes-grid">
+                        <div class="axis-card">
+                            <div class="axis-pair"><span style="color:#e53935;">勇</span><span class="vs">or</span><span
+                                    style="color:#43a047;">熟</span></div>
+                            <div class="axis-label">挑戦志向 or 経験志向<br>新しい道を切り拓くか、積み重ねを活かすか</div>
+                        </div>
+                        <div class="axis-card">
+                            <div class="axis-pair"><span style="color:#e91e90;">共</span><span class="vs">or</span><span
+                                    style="color:#7b1fa2;">独</span></div>
+                            <div class="axis-label">チーム志向 or 個人志向<br>仲間と進むか、自分の道を行くか</div>
+                        </div>
+                        <div class="axis-card">
+                            <div class="axis-pair"><span style="color:#ef6c00;">創</span><span class="vs">or</span><span
+                                    style="color:#6d4c41;">実</span></div>
+                            <div class="axis-label">創造重視 or 実行重視<br>新しいものを生むか、確実に成し遂げるか</div>
+                        </div>
+                        <div class="axis-card">
+                            <div class="axis-pair"><span style="color:#1e88e5;">変</span><span class="vs">or</span><span
+                                    style="color:#4fc3f7;">安</span></div>
+                            <div class="axis-label">変化志向 or 安定志向<br>変化を楽しむか、土台を固めるか</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 4: Group A ===== -->
+        <section class="slide slide--group-a" id="slide-4">
+            <span class="slide-number">04 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--a">Group A — 勇 × 共</span>
+                    <h2 class="group-name" style="color:var(--c-group-a);">開拓の冒険者たち</h2>
+                    <p class="group-desc">チームで価値を生み出すタイプ。仲間と共に新しい世界を切り拓く。<br>リーダーシップやチームを巻き込む力が自然に発揮されやすいです。</p>
+                </div>
+                <div class="char-grid anim-item">
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--a"><img src="images/archimageji.jpg" alt="アーキメイジ"></div>
+                        <div class="char-name">アーキメイジ</div>
+                        <div class="char-catch">「チームで未来を創る、感性豊かな革新者」</div>
+                        <div class="char-trait">勇・共・創・変。ビジョンを描き、人を巻き込みながら新しい価値を形にする</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--a"><img src="images/shaman.png" alt="シャーマン"></div>
+                        <div class="char-name">シャーマン</div>
+                        <div class="char-catch">「人の心に寄り添い、創造で支える癒し手」</div>
+                        <div class="char-trait">勇・共・創・安。人の感情や背景を敏感に感じ取り、言葉や表現で支える</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--a"><img src="images/crafter.png" alt="クラフター"></div>
+                        <div class="char-name">クラフター</div>
+                        <div class="char-catch">「仲間と一緒に形にする、動ける実行派」</div>
+                        <div class="char-trait">勇・共・実・変。アイデアを現実に落とし込み、場を動かす</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--a"><img src="images/paladin.png" alt="パラディン"></div>
+                        <div class="char-name">パラディン</div>
+                        <div class="char-catch">「周囲を守り抜く、地に足のついた実務リーダー」</div>
+                        <div class="char-trait">勇・共・実・安。責任感が強く、チームの安定と成果を両立する</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 5: Group B ===== -->
+        <section class="slide slide--group-b" id="slide-5">
+            <span class="slide-number">05 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--b">Group B — 勇 × 独</span>
+                    <h2 class="group-name" style="color:var(--c-group-b);">孤高の探求者たち</h2>
+                    <p class="group-desc">個の突破力で切り拓くタイプ。<br>独自の感覚や戦略で、自分だけの道を切り拓く力が発揮されやすいです。</p>
+                </div>
+                <div class="char-grid anim-item">
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--b"><img src="images/mage.png" alt="メイジ"></div>
+                        <div class="char-name">メイジ</div>
+                        <div class="char-catch">「ひらめきを武器に、挑戦を楽しむ自由人」</div>
+                        <div class="char-trait">勇・独・創・変。常識に縛られず、直感と好奇心で突き進む</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--b"><img src="images/strategist.png" alt="ストラテジスト"></div>
+                        <div class="char-name">ストラテジスト</div>
+                        <div class="char-catch">「冷静にチャンスを狙う、戦略思考の構想家」</div>
+                        <div class="char-trait">勇・独・創・安。感情より構造、勢いより計画。長期視点で勝ち筋を描く</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--b"><img src="images/warrior.jpg" alt="ウォリアー"></div>
+                        <div class="char-name">ウォリアー</div>
+                        <div class="char-catch">「リスクを恐れず突破する、現場主義の実践者」</div>
+                        <div class="char-trait">勇・独・実・変。行動が早く、決断力がある。困難な状況ほど燃える</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--b"><img src="images/guardian.jpg" alt="ガーディアン"></div>
+                        <div class="char-name">ガーディアン</div>
+                        <div class="char-catch">「守りを固めて挑む、堅実な努力家」</div>
+                        <div class="char-trait">勇・独・実・安。目立たなくても組織を下支えする。正確さと継続力が武器</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 6: Group C ===== -->
+        <section class="slide slide--group-c" id="slide-6">
+            <span class="slide-number">06 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--c">Group C — 熟 × 共</span>
+                    <h2 class="group-name" style="color:var(--c-group-c);">守護の賢者たち</h2>
+                    <p class="group-desc">経験と共感で支えるタイプ。<br>積み重ねた経験と人への思いやりで、チームを支える力が発揮されやすいです。</p>
+                </div>
+                <div class="char-grid anim-item">
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--c"><img src="images/storyteller.png" alt="ストーリーテラー"></div>
+                        <div class="char-name">ストーリーテラー</div>
+                        <div class="char-catch">「人の心を動かす、物語の語り部」</div>
+                        <div class="char-trait">熟・共・創・変。経験を物語に変え、共感を生む</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--c"><img src="images/artist.png" alt="アーティスト"></div>
+                        <div class="char-name">アーティスト</div>
+                        <div class="char-catch">「感性とこだわりを大切にする職人肌」</div>
+                        <div class="char-trait">熟・共・創・安。妥協しない美意識と丁寧さ</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--c"><img src="images/healer.png" alt="ヒーラー"></div>
+                        <div class="char-name">ヒーラー</div>
+                        <div class="char-catch">「安心を届ける、縁の下の力持ち」</div>
+                        <div class="char-trait">熟・共・実・変。相手の変化に気づき、柔軟に支える</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--c"><img src="images/monk.png" alt="モンク"></div>
+                        <div class="char-name">モンク</div>
+                        <div class="char-catch">「黙々と積み上げる、継続の人」</div>
+                        <div class="char-trait">熟・共・実・安。経験を糧に、安定した成果を出す</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 7: Group D ===== -->
+        <section class="slide slide--group-d" id="slide-7">
+            <span class="slide-number">07 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--d">Group D — 熟 × 独</span>
+                    <h2 class="group-name" style="color:var(--c-group-d);">静寂の職人たち</h2>
+                    <p class="group-desc">知と技で構造を変えるタイプ。<br>深い専門性と独自の視点で、仕組みをつくり変える力が発揮されやすいです。</p>
+                </div>
+                <div class="char-grid anim-item">
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--d"><img src="images/innovator.png" alt="イノベーター"></div>
+                        <div class="char-name">イノベーター</div>
+                        <div class="char-catch">「孤高で挑む、変革の起点」</div>
+                        <div class="char-trait">熟・独・創・変。独自の視点で新しい価値を創り出す</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--d"><img src="images/planner.png" alt="プランナー"></div>
+                        <div class="char-name">プランナー</div>
+                        <div class="char-catch">「構想を形にする設計者」</div>
+                        <div class="char-trait">熟・独・創・安。調査と設計で構想を形にする</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--d"><img src="images/reformer.png" alt="リフォーマー"></div>
+                        <div class="char-name">リフォーマー</div>
+                        <div class="char-catch">「仕組みで変える、静かな改革者」</div>
+                        <div class="char-trait">熟・独・実・変。現場の課題を見抜き、仕組みで解決する</div>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar char-avatar--d"><img src="images/sage.png" alt="セージ"></div>
+                        <div class="char-name">セージ</div>
+                        <div class="char-catch">「知識と規律で支える安定の要」</div>
+                        <div class="char-trait">熟・独・実・安。正確さと信頼性で組織を支える</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 8: Group A Detail 1 ===== -->
+        <section class="slide slide--detail-a" id="slide-8">
+            <span class="slide-number">08 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--a">開拓の冒険者たち — 前編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--a"><img src="images/archimageji.jpg" alt="アーキメイジ">
+                            </div>
+                            <div class="detail-info">
+                                <div class="detail-name">アーキメイジ</div>
+                                <div class="detail-catch">「チームで未来を創る、感性豊かな革新者」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">
+                                ビジョンを描き、人を巻き込みながら新しい価値を形にするタイプ。感性と構想力を行き来しながら、全体最適を考える傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">正解のないテーマに挑むとき／複数職種をつなぐ役割</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--a">プロダクトマネージャー</span>
+                            <span class="detail-tag detail-tag--a">UI/UXデザイナー</span>
+                            <span class="detail-tag detail-tag--a">新規事業開発</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--a"><img src="images/shaman.png" alt="シャーマン"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">シャーマン</div>
+                                <div class="detail-catch">「人の心に寄り添い、創造で支える癒し手」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">人の感情や背景を敏感に感じ取り、言葉や表現で支えるタイプ。静かな共感力と継続的な創造性を持つ傾向があります。
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">想いを言語化する／文化や価値観を育てる場</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--a">ライター</span>
+                            <span class="detail-tag detail-tag--a">編集</span>
+                            <span class="detail-tag detail-tag--a">ブランド戦略</span>
+                            <span class="detail-tag detail-tag--a">教育・研修職</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 9: Group A Detail 2 ===== -->
+        <section class="slide slide--detail-a" id="slide-9">
+            <span class="slide-number">09 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--a">開拓の冒険者たち — 後編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--a"><img src="images/crafter.png" alt="クラフター"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">クラフター</div>
+                                <div class="detail-catch">「仲間と一緒に形にする、動ける実行派」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">アイデアを現実に落とし込み、場を動かすタイプ。周囲と連携しながら、まず手を動かす傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">企画の実行フェーズ／人を巻き込む現場</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--a">営業企画</span>
+                            <span class="detail-tag detail-tag--a">イベントプランナー</span>
+                            <span class="detail-tag detail-tag--a">広報</span>
+                            <span class="detail-tag detail-tag--a">CS</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--a"><img src="images/paladin.png" alt="パラディン"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">パラディン</div>
+                                <div class="detail-catch">「周囲を守り抜く、地に足のついた実務リーダー」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">責任感が強く、チームの安定と成果を両立するタイプ。信頼される"任せられる人"になる傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">組織運営／プロジェクト推進</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--a">カスタマーサクセス</span>
+                            <span class="detail-tag detail-tag--a">組織開発</span>
+                            <span class="detail-tag detail-tag--a">採用人事</span>
+                            <span class="detail-tag detail-tag--a">PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 10: Group B Detail 1 ===== -->
+        <section class="slide slide--detail-b" id="slide-10">
+            <span class="slide-number">10 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--b">孤高の探求者たち — 前編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--b"><img src="images/mage.png" alt="メイジ"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">メイジ</div>
+                                <div class="detail-catch">「ひらめきを武器に、挑戦を楽しむ自由人」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">常識に縛られず、直感と好奇心で突き進むタイプ。独自の感覚を何より大切にする傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">未踏領域への挑戦／個人裁量の大きい環境</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--b">起業家</span>
+                            <span class="detail-tag detail-tag--b">アートディレクター</span>
+                            <span class="detail-tag detail-tag--b">研究職</span>
+                            <span class="detail-tag detail-tag--b">デイトレーダー</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--b"><img src="images/strategist.png" alt="ストラテジスト">
+                            </div>
+                            <div class="detail-info">
+                                <div class="detail-name">ストラテジスト</div>
+                                <div class="detail-catch">「冷静にチャンスを狙う、戦略思考の構想家」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">感情より構造、勢いより計画。長期視点で勝ち筋を描くタイプ。冷静な分析力を持つ傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">市場分析／戦略設計</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--b">経営企画</span>
+                            <span class="detail-tag detail-tag--b">マーケター</span>
+                            <span class="detail-tag detail-tag--b">クリエイティブディレクター</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 11: Group B Detail 2 ===== -->
+        <section class="slide slide--detail-b" id="slide-11">
+            <span class="slide-number">11 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--b">孤高の探求者たち — 後編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--b"><img src="images/warrior.jpg" alt="ウォリアー"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">ウォリアー</div>
+                                <div class="detail-catch">「リスクを恐れず突破する、現場主義の実践者」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">行動が早く、決断力があるタイプ。困難な状況ほど燃える傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">売上責任／修羅場</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--b">法人営業</span>
+                            <span class="detail-tag detail-tag--b">事業責任者</span>
+                            <span class="detail-tag detail-tag--b">ベンチャーCOO</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--b"><img src="images/guardian.jpg" alt="ガーディアン">
+                            </div>
+                            <div class="detail-info">
+                                <div class="detail-name">ガーディアン</div>
+                                <div class="detail-catch">「守りを固めて挑む、堅実な努力家」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">目立たなくても組織を下支えするタイプ。正確さと継続力が武器になる傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">安定運用／基盤づくり</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--b">オペレーション設計</span>
+                            <span class="detail-tag detail-tag--b">総務</span>
+                            <span class="detail-tag detail-tag--b">人事労務</span>
+                            <span class="detail-tag detail-tag--b">コーポレートIT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 12: Group C Detail 1 ===== -->
+        <section class="slide slide--detail-c" id="slide-12">
+            <span class="slide-number">12 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--c">守護の賢者たち — 前編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--c"><img src="images/storyteller.png"
+                                    alt="ストーリーテラー"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">ストーリーテラー</div>
+                                <div class="detail-catch">「人の心を動かす、物語の語り部」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">経験を物語に変え、共感を生むタイプ。感情と文脈をつなぐ傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">共感を軸にした発信／チームの想いを言語化する場面</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--c">SNS運用</span>
+                            <span class="detail-tag detail-tag--c">コピー</span>
+                            <span class="detail-tag detail-tag--c">映像</span>
+                            <span class="detail-tag detail-tag--c">カスタマーマーケ</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--c"><img src="images/artist.png" alt="アーティスト"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">アーティスト</div>
+                                <div class="detail-catch">「感性とこだわりを大切にする職人肌」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">妥協しない美意識と丁寧さを持つタイプ。こだわりを形にする力がある傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">ビジュアル制作／クオリティを追求する場面</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--c">デザイナー</span>
+                            <span class="detail-tag detail-tag--c">商品企画</span>
+                            <span class="detail-tag detail-tag--c">雑誌編集</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 13: Group C Detail 2 ===== -->
+        <section class="slide slide--detail-c" id="slide-13">
+            <span class="slide-number">13 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--c">守護の賢者たち — 後編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--c"><img src="images/healer.png" alt="ヒーラー"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">ヒーラー</div>
+                                <div class="detail-catch">「安心を届ける、縁の下の力持ち」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">相手の変化に気づき、柔軟に支えるタイプ。安心感を与える傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">チームサポート／メンバーケア</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--c">CS</span>
+                            <span class="detail-tag detail-tag--c">カウンセラー</span>
+                            <span class="detail-tag detail-tag--c">保育</span>
+                            <span class="detail-tag detail-tag--c">研修講師</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--c"><img src="images/monk.png" alt="モンク"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">モンク</div>
+                                <div class="detail-catch">「黙々と積み上げる、継続の人」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">経験を糧に、安定した成果を出すタイプ。コツコツと確実に積み上げる傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">安定運用／仕組みづくり</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--c">経理</span>
+                            <span class="detail-tag detail-tag--c">業務改善</span>
+                            <span class="detail-tag detail-tag--c">人事制度</span>
+                            <span class="detail-tag detail-tag--c">社内SE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 14: Group D Detail 1 ===== -->
+        <section class="slide slide--detail-d" id="slide-14">
+            <span class="slide-number">14 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--d">静寂の職人たち — 前編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--d"><img src="images/innovator.png" alt="イノベーター">
+                            </div>
+                            <div class="detail-info">
+                                <div class="detail-name">イノベーター</div>
+                                <div class="detail-catch">「孤高で挑む、変革の起点」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">独自の視点で新しい価値を創り出すタイプ。前例のない領域でも果敢に挑む傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">新規事業開発／未踏領域の探索</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--d">サービスデザイン</span>
+                            <span class="detail-tag detail-tag--d">AI研究</span>
+                            <span class="detail-tag detail-tag--d">R&D</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--d"><img src="images/planner.png" alt="プランナー"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">プランナー</div>
+                                <div class="detail-catch">「構想を形にする設計者」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">調査と設計で構想を形にするタイプ。体系立てて整理し、実行可能な計画に落とし込む傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">事業設計／戦略立案</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--d">BtoBマーケ</span>
+                            <span class="detail-tag detail-tag--d">IR</span>
+                            <span class="detail-tag detail-tag--d">プロダクト企画</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Slide 15: Group D Detail 2 ===== -->
+        <section class="slide slide--detail-d" id="slide-15">
+            <span class="slide-number">15 / 15</span>
+            <div class="center-layout">
+                <div class="group-header anim-item">
+                    <span class="group-label group-label--d">静寂の職人たち — 後編</span>
+                </div>
+                <div class="detail-grid anim-item">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--d"><img src="images/reformer.png" alt="リフォーマー">
+                            </div>
+                            <div class="detail-info">
+                                <div class="detail-name">リフォーマー</div>
+                                <div class="detail-catch">「仕組みで変える、静かな改革者」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">現場の課題を見抜き、仕組みで解決するタイプ。静かに、しかし確実に改善を進める傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">業務改善／システム最適化</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--d">バックエンド</span>
+                            <span class="detail-tag detail-tag--d">業務改善</span>
+                            <span class="detail-tag detail-tag--d">データ分析</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-avatar detail-avatar--d"><img src="images/sage.png" alt="セージ"></div>
+                            <div class="detail-info">
+                                <div class="detail-name">セージ</div>
+                                <div class="detail-catch">「知識と規律で支える安定の要」</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">⚡ 行動・思考の特徴</div>
+                            <div class="detail-section-text">正確さと信頼性で組織を支えるタイプ。ルールと知識に基づいた判断をする傾向があります。</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-section-label">✨ 強みが出やすい場面</div>
+                            <div class="detail-section-text">コンプライアンス／リスク管理</div>
+                        </div>
+                        <div class="detail-tags">
+                            <span class="detail-tag detail-tag--d">会計</span>
+                            <span class="detail-tag detail-tag--d">法務</span>
+                            <span class="detail-tag detail-tag--d">ファイナンス</span>
+                            <span class="detail-tag detail-tag--d">セキュリティ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Arrow Navigation -->
+    <div class="slide-arrows">
+        <button class="slide-arrow" id="arrow-prev" disabled aria-label="前のスライド">←</button>
+        <span class="slide-counter" id="slide-counter">01 / 15</span>
+        <button class="slide-arrow" id="arrow-next" aria-label="次のスライド">→</button>
+    </div>
+
+    <script src="src/slides.js"></script>
+</body>
+
+</html>
